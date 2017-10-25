@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas width="600" height="400"></canvas>
+<script>
+    var canvas=document.querySelector("canvas");
+    var ctx=canvas.getContext("2d");
+
+    //加载图片
+    var image= new Image();
+    //加载完成
+    image.onload=function(){
+        //绘制图片
+        //图片对象 在图片上的定位x,y  截取图片的大小w,h  画布上的坐标x,y 绘制的图像大小w,h
+        ctx.drawImage(image,300,300,200,200,100,100,100,100);
+    };
+    image.src='images/02.jpg';
+</script>
+</body>
+</html>
